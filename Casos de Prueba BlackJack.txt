@@ -1,0 +1,90 @@
+## Caso 1 -> Jugador tiene BlackJack
+Player1: J, A             (21, Black Jack)
+Player2: 10, 5, 6         (21)
+Player3: 3, 6, A, 3, A, K (24)
+Crupier: 9, 7             (16)
+Deck: 6, 4, K, 2
+
+getWinners(...) ---> [Player1]
+
+## Caso 2 -> Jugador suma 21
+Player1: J, 6     (16)
+Player2: 10, 5, 6 (21)
+Player3: 5, 6, 7  (18)
+Crupier: 4, 7, 9  (20)
+Deck: 3, 3, K, 2
+
+getWinners(...) ---> [Player2]
+ 
+## Caso 3 -> n jugadores tienen BlackJack
+Player1: J, A       (21, Black Jack)
+Player2: J, A       (21, Black Jack)
+Player3: A, 5, 6, J (22)
+Crupier: 5, 10      (15)
+Deck: A, 3, K, 2
+
+getWinners(...) ---> [Player1, Player2]
+
+## Caso 4 -> Un jugador tiene la suma más alta sin pasarse de 21
+Player1: 8, 2, 9   (19)
+Player2: 5, 9, 4   (18)
+Player3: 10, 10, 5 (25)
+Crupier: 5, Q, 3   (18)
+Deck: 4, 5, 8, Q
+
+getWinners(...) ---> [Player 1]
+
+
+## Caso 5 -> Un jugador tiene BlackJack y el crupier suma 21
+Player1: J, A       (21, Black Jack)
+Player2: 5, 8, 9,   (22)
+Player3: 2, 9, Q    (22)
+Crupier: 5, 6, 5, 5 (21)
+Deck: 6, 8, 2, Q
+
+getWinners(...) ---> [Player 1]
+
+## Caso 6 -> n jugadadores y crupier tienen BlackJack
+Player1: J, Q, 5 (25)
+Player2: A, J (21, Black Jack)
+Player3: Q, A (21, Black Jack)
+Crupier: A, K (21, Black Jack)
+Deck: 5, 4, 3, 7
+
+getWinners(...) ---> [Crupier]
+
+## Caso 7 -> Crupier gana cogiendo una carta
+Player1: J, 4, 7 (22)
+Player2: Q, 5, 6 (21)
+Player3: 2, 8, 9 (19)
+Crupier: 5, 6, 5 (16)
+Deck: 5, 6, 8, A
+
+getWinners(...) ---> [Crupier]
+
+## Caso 8 -> Crupier tiene BlackJack cogiendo una carta
+Player1: J, 4, 7 (22)
+Player2: Q, 5, 6 (21)
+Player3: 2, 8, 9 (19)
+Crupier: J       (10)
+Deck: A, 6, 8, A
+
+getWinners(...) ---> [Crupier]
+
+## Caso 9 -> Crupier suma 21 cogiendo n cartas
+Player1: 5, 10, 8   (23)
+Player2: Q, 3, A, 8 (22)
+Player3: Q, J       (20)
+Crupier: 10, 4      (14)
+Deck: 2, 5, A, 3 
+
+getWinners(...) ---> [Crupier]
+
+## Caso 10 -> Jugador gana con más de un As
+Player1: 5, A, A, 4 (21)
+Player2: Q, J, 10   (30)
+Player3: 10, 9      (19)
+Crupier: 3, 10, 6   (19)
+Deck: 2, 5, A, 3
+
+getWinners(...) -> [Player1]
